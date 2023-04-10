@@ -1,5 +1,8 @@
-const express = requiere('express');
+const express = require('express');
 const router = express.Router();
-const controller = requiere('../controllers/user_controller.js');
+const controller = require('../controllers/user_controller.js');
 
 router.route('/').put(controller.test);
+
+
+module.exports = router;
