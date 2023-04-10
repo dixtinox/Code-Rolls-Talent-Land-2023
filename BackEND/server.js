@@ -4,14 +4,17 @@ const app = require('express')();
 const port = process.env.PORT;
 const mongoose = require('mongoose');
 const connectDB = require('./src/config/dbConn');
+const mainRouter = require('./src/routes/index')
 
 connectDB();
 
-app.get('/', (req, res) => {
+app.use('/', mainRouter )
 
-    res.send('Hello World');
+// app.get('/', (req, res) => {
 
-});
+//     res.send('Hello World');
+
+// });
 
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB');
