@@ -1,6 +1,7 @@
 //Server
 const app = require('express')();
 const port = process.env.PORT || 3000;
+// const routes = require('./routes/index')
 
 app.listen(
     port,
@@ -12,3 +13,4 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 
 });
+// app.use('/', routes);
