@@ -20,14 +20,25 @@ const userSchema = new Schema({
     required: true,
   },
   birthDate: {
-    type: "Date",
+    type: Date,
     required: true,
+  },
+  gender: {
+    type: String,
+    required: true,
+    trim: true,
+    lowercase: true,
   },
   weight: { type: Number },
   height: { type: Number },
   streak: { type: Number },
   objectives: {
     type: new Schema({ name: String, lastDayReached: Date, count: Number }),
+    default: {
+        name: "Beber agua",
+        lastDayReached: Date.now,
+        count: 0,
+    }
   },
   healthHistory: {
     _id: false,
