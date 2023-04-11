@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+
 .App {
   display: flex;
   flex-direction: column;
@@ -7,11 +9,22 @@
 
 .AppHeader{
   height: 50px;
+  background-color: #f1f2f3;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 20px 4px 12px;
+  padding: 4px 20px 4px 19px;
   border-bottom: 1px solid rgba(0,0,0, 0.15);
+}
+
+.logoDemeter{
+  background-color: transparent;
+  border: transparent;
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #008959;
 }
 
 .AppFooter{
@@ -27,7 +40,14 @@
 }
 
 .SideBar{
-  
+  width: 300px;
+  font-family: 'Rubik', sans-serif;
+  border: 0px;
+}
+
+.dash--menu{
+  width: 300px;
+  border: none;
 }
 
 .SideMenuAndPageContent{
@@ -35,4 +55,8 @@
   flex: 1;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+.my-theme{
+  --primary-color: #008959;
 }

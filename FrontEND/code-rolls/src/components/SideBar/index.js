@@ -1,12 +1,29 @@
-import React from 'react'
-import { Menu } from 'antd'
+import React, { useState } from 'react'
+import { Menu, Drawer } from 'antd'
+import { MenuOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
 
 const SideBar = () => {
-  const navigate = useNavigate()
+  const [openMenu, setopenMenu] = useState(false);
   return (
+    
     <div className='Sidebar'>
-      <Menu
+      <Drawer 
+      open={openMenu}
+      closable={false} 
+      placement='left'
+      onClose={() => 
+        setopenMenu(false)}>
+        <Dash />
+      </Drawer>
+    </div>
+  )
+}
+
+function Dash(){
+  const navigate = useNavigate()
+  return(
+    <Menu
         onClick={(item) => {
           navigate(item.key);
         }}
@@ -24,11 +41,9 @@ const SideBar = () => {
           key: "/planes"
         },
       ]}>
-
-      </Menu>
-
-    </div>
+    </Menu>
   )
+  
 }
 
 export default SideBar
