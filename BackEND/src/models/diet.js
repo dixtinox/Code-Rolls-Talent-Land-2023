@@ -7,10 +7,11 @@ const dietSchema = new Schema({
         required: true
     },
     user_id: {
-        type: Number,
-        required: true
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: "User",
     },
-    meal_name: {
+    diet_name: {
         type: String,
         required: true
     },
