@@ -1,20 +1,27 @@
-const {schema, model} = require('mongoose');
+const mongoose= require('mongoose');
+const Schema = mongoose.Schema;
 
-const dietSchema = new schema({
-    id: {
-        type: Number,
-        required: true
-    },
+const dietSchema = new Schema({
     user_id: {
-        type: Number,
-        required: true
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: "User",
     },
-    meal_name: {
+    diet_name: {
         type: String,
-        required: true
+        required: true,
+        trim: true,
     },
-    meal:{
-        type: new schema({
+    diet_label: {
+        type: String,
+        trim: true,
+    },
+    author: {
+        type: String,
+        trim: true,
+    },
+    meal:[{
+        type: new Schema({
             label:{
                 type: String
             },
@@ -27,12 +34,10 @@ const dietSchema = new schema({
             details:{
                 type: String
             }
-
-
         }),
-    }
+    }]
        
     
 });
 
-model.exports = model('Diet', dietSchema);
+module.exports = mongoose.model('Diet', dietSchema);
