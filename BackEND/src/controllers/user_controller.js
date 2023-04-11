@@ -52,7 +52,6 @@ const Update = async (req, res) => {
 
 const remove = async (req, res) => {
   const id = req.params.id;
-  console.log(id)
   if (id && !validate.isObjectIdValid(id)) {
     return res.status(statuses.BADREQUEST).json();
   }
