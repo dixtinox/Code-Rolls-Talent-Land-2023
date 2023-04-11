@@ -19,6 +19,9 @@ const Update = async (req, res) => {
   if (!id || !name || !email || !birthDate || !gender) {
     return res.status(statuses.MISSINGREQUIRED);
   }
+  if (id && !validate.isObjectIdValid(id)) {
+    return res.status(statuses.BADREQUEST).json();
+  }
   if (!email || !EmailValidator.validate(email)) {
     return res.status(statuses.BADEMAIL).json();
   }
