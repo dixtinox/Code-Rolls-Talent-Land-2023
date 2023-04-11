@@ -9,9 +9,18 @@ const dietSchema = new Schema({
     },
     diet_name: {
         type: String,
-        required: true
+        required: true,
+        trim: true,
     },
-    meal:{
+    diet_label: {
+        type: String,
+        trim: true,
+    },
+    author: {
+        type: String,
+        trim: true,
+    },
+    meal:[{
         type: new Schema({
             label:{
                 type: String
@@ -25,10 +34,8 @@ const dietSchema = new Schema({
             details:{
                 type: String
             }
-
-
         }),
-    }
+    }]
        
     
 });
