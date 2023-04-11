@@ -8,7 +8,7 @@ const algo = async (req, res) => {
 };
 
 const createDiet = async (req, res) => {
-  const { diet_name, user_id } = req.body;
+  const { diet_name, user_id, diet_label, author } = req.body;
   if (!diet_name || !user_id ) {
     return res.status(statuses.MISSINGREQUIRED);
   }
@@ -23,6 +23,8 @@ const createDiet = async (req, res) => {
   const newDiet = await Diet.create({
     user_id,
     diet_name,
+    diet_label,
+    author,
   })
   return res.status(statuses.CREATED).json(newDiet);
 };
