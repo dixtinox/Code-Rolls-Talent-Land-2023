@@ -51,7 +51,7 @@ const login = async (req, res) => {
     if (!email || !EmailValidator.validate(email)) {
       return res.status(statuses.BADEMAIL).json();
     }
-    const checkUser = await User.findOne({ email: email, password:password });
+    const checkUser = await User.findOne({ email: email, password:password }, {password:0});
     if (!checkUser) {
       return res.status(statuses.NOTFOUND).json();
     }
