@@ -47,7 +47,9 @@ const Update = async (req, res) => {
         healthHistory,
       },
     },
-    { new: true }
+    { new: true ,
+      projection: { password: 0 },
+    }
   );
 
   return res.status(statuses.CREATED).json(newUser);
