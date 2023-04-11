@@ -3,40 +3,40 @@ const statuses = require("../constants/statuses");
 const EmailValidator = require("email-validator");
 
 const singin = async (req, res) => {
-    console.log(req.body);
-    res.status(statuses.CREATED).json({name: "juan"})
-//   const {
-//     name,
-//     email,
-//     password,
-//     birthDate,
-//     gender,
-//     weight,
-//     height,
-//     healthHistory,
-//   } = req.body;
+  const {
+    name,
+    email,
+    password,
+    birthDate,
+    gender,
+    weight,
+    height,
+    healthHistory,
+  } = req.body;
 
-//   if (!name || !email || !password || !birthDate || !gender) {
-//     return res.status(statuses.MISSINGREQUIRED);
-//   }
-//   if (!email || !EmailValidator.validate(email)) {
-//     return res.status(statuses.BADEMAIL).json();
-//   }
-//   const checkUser = await User.findOne({ email: email });
-//   if (checkUser) {
-//     res.status(statuses.DUPLICATED).json();
-//   }
+  if (!name || !email || !password || !birthDate || !gender) {
+    return res.status(statuses.MISSINGREQUIRED);
+  }
+  if (!email || !EmailValidator.validate(email)) {
+    return res.status(statuses.BADEMAIL).json();
+  }
+  const checkUser = await User.findOne({ email: email });
+  if (checkUser) {
+    res.status(statuses.DUPLICATED).json();
+  }
 
-//   const newUser = await User.create({
-//     name,
-//     email,
-//     password,
-//     birthDate,
-//     gender,
-//     weight,
-//     height,
-//     healthHistory,
-//   });
+  const newUser = await User.create({
+    name,
+    email,
+    password,
+    birthDate,
+    gender,
+    weight,
+    height,
+    healthHistory,
+  });
+
+  return res.status(statuses.CREATED).json(newUser);
 };
 
 

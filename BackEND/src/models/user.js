@@ -36,7 +36,7 @@ const userSchema = new Schema({
     type: new Schema({ name: String, lastDayReached: Date, count: Number }),
     default: {
         name: "Beber agua",
-        lastDayReached: Date.now,
+        lastDayReached: Date.now(),
         count: 0,
     }
   },
