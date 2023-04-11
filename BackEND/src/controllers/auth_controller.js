@@ -22,7 +22,7 @@ const singin = async (req, res) => {
   }
   const checkUser = await User.findOne({ email: email });
   if (checkUser) {
-    res.status(statuses.DUPLICATED).json();
+    return res.status(statuses.DUPLICATED).json();
   }
 
   const newUser = await User.create({
@@ -39,7 +39,26 @@ const singin = async (req, res) => {
   return res.status(statuses.CREATED).json(newUser);
 };
 
+const login = async (req, res) => {
+    const {
+      email,
+      password,
+    } = req.body;
+
+    if ( !email || !password) {
+      return res.status(statuses.MISSINGREQUIRED);
+    }
+    if (!email || !EmailValidator.validate(email)) {
+      return res.status(statuses.BADEMAIL).json();
+    }
+    const checkUser = await User.findOne({ email: email, password:password });
+    if (!checkUser) {
+      return res.status(statuses.NOTFOUND).json();
+    }
+    return res.status(statuses.OK).json(checkUser);
+  };
 
 module.exports = {
     singin,
+    login,
 }
