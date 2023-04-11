@@ -4,6 +4,8 @@ const controller = require('../controllers/objectives_controller.js');
 
 router.route('/checkstreak').get(controller.CheckDailyStreak);
 router.route('/followDiet').put(controller.CompleteDailyStreakFollowDiet);
+router.route('/drinkWater').put(controller.CompleteDailyStreakDrink);
+router.route('/exetcise').put(controller.CompleteDailyStreakExcercise);
 
 
 module.exports = router;
