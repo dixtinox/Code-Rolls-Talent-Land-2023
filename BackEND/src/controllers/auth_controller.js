@@ -2,7 +2,7 @@ const User = require("../models/user");
 const statuses = require("../constants/statuses");
 const EmailValidator = require("email-validator");
 
-const singin = async (req, res) => {
+const signin = async (req, res) => {
   const {
     name,
     email,
@@ -59,6 +59,6 @@ const login = async (req, res) => {
   };
 
 module.exports = {
-    singin,
+    signin,
     login,
 }

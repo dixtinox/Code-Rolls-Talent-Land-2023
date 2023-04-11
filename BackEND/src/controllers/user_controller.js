@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const User = require("../models/user");
 const statuses = require("../constants/statuses");
 const EmailValidator = require("email-validator");
@@ -51,6 +50,20 @@ const Update = async (req, res) => {
   return res.status(statuses.CREATED).json(newUser);
 };
 
+const remove = async (req, res) => {
+  const id = req.params.id;
+  console.log(id)
+  if (id && !validate.isObjectIdValid(id)) {
+    return res.status(statuses.BADREQUEST).json();
+  }
+  const result = await User.findByIdAndDelete({ _id: id });
+  if (!result) {
+    return res.status(statuses.NOTFOUND).json();
+  }
+  return res.status(statuses.OK).json(result);
+};
+
 module.exports = {
   Update,
+  remove,
 };
