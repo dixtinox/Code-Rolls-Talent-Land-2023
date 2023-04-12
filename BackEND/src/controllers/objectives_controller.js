@@ -30,7 +30,9 @@ const IsPerfectWeek = (user) => {
 };
 
 const CheckDailyStreak = async (req, res) => {
+  console.log('Se realizó la solicirud')
   const { user_id } = req.body;
+  console.log(user_id)
   if (!user_id) {
     return res.status(statuses.MISSINGREQUIRED);
   }
