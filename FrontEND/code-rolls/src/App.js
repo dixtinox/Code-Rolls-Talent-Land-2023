@@ -11,9 +11,7 @@ function App() {
   return (
     <div className='App'>
       <AppHeader />
-      <Space className='SideMenuAndPageContent'>
-        <Content/>
-      </Space>
+      <Content/>
       <AppFooter/>
     </div>
   );
