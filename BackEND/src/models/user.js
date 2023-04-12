@@ -6,7 +6,7 @@ const objectiveSchema = new Schema({
   drinkWater: { type: Boolean, default: false },
   followDiet: { type: Boolean, default: false },
   exercise: { type: Boolean, default: false },
-  perfectDay: { type: Boolean, default: false },
+  perfectDay: { type: Number, default: 0 },
 }, { _id: false });
 
 const userSchema = new Schema({
@@ -39,7 +39,8 @@ const userSchema = new Schema({
   },
   weight: { type: Number },
   height: { type: Number },
-  perfectDays: { type: Number },
+  perfectDays: { type: Number, default: 0 },
+  nutriPoints: {type: Number, default: 0},
   initialStreakDay: { type: Date, default: Date.now() },
   objectives: {
     type: [objectiveSchema],
