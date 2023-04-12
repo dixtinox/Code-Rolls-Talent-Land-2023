@@ -70,10 +70,16 @@
 }
 
 .nutri--container{
-  border: 2px solid black;
   overflow: hidden;
   justify-content: center;
   align-items: center;
+}
+
+.nutri--containerCircular{
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
   border-radius: 50%;
 }
 
@@ -126,4 +132,9 @@ button {
 .column {
   border-radius: 5px;
   padding: 10px;
+}
+
+.btn-flat{
+  background-color: transparent;
+  color: grey;
 }

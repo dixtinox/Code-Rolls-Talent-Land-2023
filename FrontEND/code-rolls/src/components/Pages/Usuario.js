@@ -7,7 +7,7 @@ const Usuario = () => {
 
   return (
     <div>
-        <Nutri descripcion = {mensaje}/>
+        <Nutri descripcion = {mensaje} imagen = {0} variant="flat" class="nutri--containerCircular"/>
     </div>
   )
 }
