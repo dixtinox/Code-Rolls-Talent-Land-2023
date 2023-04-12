@@ -71,8 +71,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
 }
 
 .nutri{
@@ -80,3 +81,16 @@
   max-height: 100%;
 }
 
+.ant-tour-inner{
+  display: flex;
+  min-width: 100%;
+  align-items: center;
+  align-content: center;
+}
+
+.ant-tour-cover{
+  display: flex;
+  padding: 0;
+  align-content: center;
+  align-items: center;
+}

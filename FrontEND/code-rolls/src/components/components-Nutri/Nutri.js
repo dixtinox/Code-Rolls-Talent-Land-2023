@@ -11,8 +11,7 @@ const Nutri = (props) => {
         {
         title: 'Nutri',
         description: props.descripcion,
-        target: () => ref.current,
-        placement: 'bottom',
+        target: null,
         cover: (
             <div className='step--cover'>
                 <img className='nutri' alt="nutri.png" src={nutria} />
@@ -22,7 +21,7 @@ const Nutri = (props) => {
     ];
     return (
         <div>
-            <Button type="text" onClick={() => setOpen(true)} ref={ref}>
+            <Button type="text" onClick={() => setOpen(true)}>
                 a
             </Button>
             <Tour open={open} onClose={() => setOpen(false)} steps={steps} />
