@@ -2,7 +2,7 @@ import React from "react";
 import Plan from "../components-Planes/Plan";
 import "bootstrap/dist/css/bootstrap.css";
 import data from "../components-Planes/data";
-import { Button, Card } from "antd";
+import { Button } from "antd";
 
 /*<Plan nombre={cosa.title} tipo={cosa.tipo} autor={cosa.autor} tinte={cosa.tinte}/>*/
 
