@@ -1,6 +1,5 @@
 import React from 'react'
 import { Modal, Button, Container, Row, Col } from 'react-bootstrap'
-import { useRef, useState } from 'react';
 import nutria from '../images/nutri.png'
 
 
@@ -25,7 +24,7 @@ const Nutri = (props) => {
                     <Row>
                         <Col sm='4'>
                             <div className='nutri--container'>
-                                <img className='nutri' src={nutria}/>
+                                <img className='nutri' src={nutria} alt='Imagen de nutria mascota animada'/>
                             </div>
                         </Col>
                         <Col sm='8'>
