@@ -67,7 +67,20 @@ const remove = async (req, res) => {
   return res.status(statuses.OK).json(result);
 };
 
+const GetOne = async (req, res) => {
+  const id = req.params.id;
+  if (id && !validate.isObjectIdValid(id)) {
+    return res.status(statuses.BADREQUEST).json();
+  }
+  const result = await User.findById({ _id: id });
+  if (!result) {
+    return res.status(statuses.NOTFOUND).json();
+  }
+  return res.status(statuses.OK).json(result);
+};
+
 module.exports = {
   Update,
   remove,
+  GetOne,
 };
