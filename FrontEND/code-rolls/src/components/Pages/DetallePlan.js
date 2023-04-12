@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import data from "../components-Planes/data";
 import { MealList } from "../components-DetallePlan/MealList";
 import { Button } from "antd";
-import { ArrowLeftOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import { BackButton } from "../common/backButton"
 
 const DetallePlan = () => {
   const { id } = useParams();
@@ -20,15 +20,11 @@ const DetallePlan = () => {
           className="container-fluid"
           style={{ display: "flex", alignItems: "center" }}
         >
-          <Button
-            shape="circle"
-            title="Regresar"
-            onClick={() => {
-              navigate(`/planes`);
-            }}
-          >
-            <ArrowLeftOutlined />
-          </Button>
+          <BackButton
+                onClick={() => {
+                  navigate('/planes');
+                }}
+              ></BackButton>
           <h3 style={{ marginLeft: "10px" }}>{diet.diet_name}</h3>
         </div>
         <br></br>
