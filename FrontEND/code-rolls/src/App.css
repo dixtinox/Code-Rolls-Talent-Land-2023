@@ -96,3 +96,38 @@
   align-content: center;
   align-items: center;
 }
+
+/*Estilo green card*/
+.streak {
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+button {
+  background-color: white;
+  color: green;
+  border: 1px solid green;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+}
+
+.column {
+  border-radius: 5px;
+  padding: 10px;
+}
