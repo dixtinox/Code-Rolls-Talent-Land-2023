@@ -25,6 +25,8 @@
   font-weight: 800;
   letter-spacing: 2px;
   color: #008959;
+  display: flex;
+  align-items: center;
 }
 
 .AppFooter{
