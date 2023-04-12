@@ -1,7 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Card, Popover, Button } from "antd";
-import { BoldOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { getColorsCard } from "./utils"
 
