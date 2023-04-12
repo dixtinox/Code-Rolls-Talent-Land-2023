@@ -1,13 +1,14 @@
 import React from 'react'
 import Nutri from '../components-Nutri/Nutri'
 
+const mensaje = "Soy una buena persona"
+
 const Usuario = () => {
+
   return (
     <div>
-        <Nutri descripcion = 'Hola esta es una prueba para Nutri la Nutria'/>
+        <Nutri descripcion = {mensaje}/>
     </div>
   )
 }
-
-
 export default Usuario;
