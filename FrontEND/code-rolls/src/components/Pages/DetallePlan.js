@@ -16,6 +16,7 @@ const DetallePlan = () => {
     return (
       <>
        <Divider plain>{meal.label} - {meal.meal_time} hrs</Divider>
+       <h5>Opciones de platillos</h5>
        <MealList meals={meal.options}></MealList> 
        <Button>
         Agregar opción de comida
