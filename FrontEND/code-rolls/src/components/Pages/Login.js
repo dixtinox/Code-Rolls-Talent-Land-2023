@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { EyeTwoTone, EyeInvisibleOutlined } from '@ant-design/icons';
+import { EyeTwoTone, EyeInvisibleOutlined } from '@ant-design/icons'; 
 import { Button, Input, Space } from 'antd';
 import axios from 'axios';
 
@@ -77,8 +77,6 @@ const LoginPage = () => {
           </label>
           <button className='btn btn-warning' type="submit">Iniciar sesión</button>
         </form>
-        <Link to="/signin">Crea una sesión</Link>
-        <a onClick={createAccount}>No tienes cuenta? Inicia sesión aquí</a>
       </div>
     </div>
   )
