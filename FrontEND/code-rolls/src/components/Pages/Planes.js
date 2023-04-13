@@ -1,6 +1,6 @@
 import React from "react";
 import Plan from "../components-Planes/Plan";
-import { NuevoPlanDrawer } from "../components-Planes/NuevoPlan.js/NuevoPlanDrawer";
+import { NuevoPlanDrawer } from "../components-Planes/NuevoPlan/NuevoPlanDrawer";
 import "bootstrap/dist/css/bootstrap.css";
 import data from "../components-Planes/data";
 import { Button } from "antd";
@@ -38,7 +38,7 @@ const Planes = () => {
     <>
       <br></br>
       <div className="container-fluid">
-        <h3>Planes alimenticios</h3>
+        <h3>Mis planes alimenticios</h3>
         <br></br>
         <Button type="primary" size={"large"} onClick={showDrawer} icon={<PlusOutlined />}>
           Agregar nuevo
