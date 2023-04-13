@@ -6,7 +6,6 @@ import 'animate.css';
 
 
 const NutriPoints = ({title, containerColor, points, perfectDays, animar}) => {
-    console.log(`Dentro de nutripoints ${points}`)
   return (
     <div className='d-flex' style={{ 
         backgroundColor: containerColor,
