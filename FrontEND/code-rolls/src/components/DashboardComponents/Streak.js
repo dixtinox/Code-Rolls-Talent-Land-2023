@@ -10,21 +10,21 @@ const Streak = ({title, buttonText, containerColor, valores, streak, reload}) =>
   async function handleClick(){
     if(streak==0){
       const response = await axios.put('http://localhost:3000/objectives/drinkWater', {
-        user_id: '6436005c3c4616f372641688'
+        user_id: '6436434ec1c5ad4d6023a8c0'
       })
       reload();
     }
     if (streak==1){
       console.log('Boton 2')
       const response = await axios.put('http://localhost:3000/objectives/followDiet', {
-        user_id: '6436005c3c4616f372641688'
+        user_id: '6436434ec1c5ad4d6023a8c0'
       })
       reload();
     }
     if (streak==2){
       console.log('Boton 3')
       const response = await axios.put('http://localhost:3000/objectives/exercise', {
-        user_id: '6436005c3c4616f372641688'
+        user_id: '6436434ec1c5ad4d6023a8c0'
       })
       reload();
     }

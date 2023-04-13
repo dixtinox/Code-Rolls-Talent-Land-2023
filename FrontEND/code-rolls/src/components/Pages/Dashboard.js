@@ -24,7 +24,7 @@ function Dashboard(){
         
 
         const response = await axios.post('http://localhost:3000/objectives/checkstreak', {
-            user_id: '6436005c3c4616f372641688'
+            user_id: '6436434ec1c5ad4d6023a8c0'
         })
         const { user: {initialStreakDay, perfectDays, nutriPoints, objectives}, currentDay} = response.data;
         setIniDate(initialStreakDay);
