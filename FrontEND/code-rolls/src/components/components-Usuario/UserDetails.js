@@ -13,7 +13,7 @@ const UserDetails = (props) => {
 
   const getUserData = async () => {
     const response = await axios.get(
-      "http://localhost:3000/user/6436434ec1c5ad4d6023a8c0"
+      "http://localhost:3000/user/6436005c3c4616f372641688"
     );
     const {
       id,
