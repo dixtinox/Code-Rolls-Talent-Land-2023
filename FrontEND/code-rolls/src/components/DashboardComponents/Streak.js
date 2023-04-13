@@ -38,7 +38,7 @@ const Streak = ({title, buttonText, containerColor, valores, streak, reload}) =>
           <h5>{title}</h5>
           <div className="columns">
             {valores.map(obj => (
-              <div key={obj.id}>
+              <div>
                 {Object.values(obj)[streak] ? <Checked checked={true}/> : <Checked checked={false}/>}
               </div>
             ))}
