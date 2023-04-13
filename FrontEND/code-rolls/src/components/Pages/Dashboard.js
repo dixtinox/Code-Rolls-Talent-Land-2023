@@ -65,6 +65,12 @@ function Dashboard(){
         }, 1000);
     }, [perf])
 
+    useEffect(() => {
+        if (streakArray[0] && streakArray[1] && streakArray[2] && streakArray[3] && streakArray[4] && streakArray[5] && streakArray[6]){
+            console.log("Felicidades, semana perfecta")
+        }
+    }, [streakArray])
+
     if (!receivedData) {
         return <div>Loading...</div>;
     }
