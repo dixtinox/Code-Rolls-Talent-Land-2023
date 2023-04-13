@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import Plan from "../components-Planes/Plan";
 import "bootstrap/dist/css/bootstrap.css";
 import data from "../components-Planes/data";

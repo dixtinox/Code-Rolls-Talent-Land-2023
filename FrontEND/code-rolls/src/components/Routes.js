@@ -1,4 +1,5 @@
 import { Routes, Route, useParams } from "react-router-dom";
+import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
 import User from "./Pages/Usuario";
 import Planes from "./Pages/Planes";
@@ -8,7 +9,8 @@ function AppRoutes() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Dashboard />}></Route>
+        <Route path="/" element={<Login />}></Route>
+        <Route path="/Dashboard" element={<Dashboard />}></Route>
         <Route path="/user" element={<User />}></Route>
         <Route path="/planes" element={<Planes />}></Route>
         <Route

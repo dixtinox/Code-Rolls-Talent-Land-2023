@@ -138,3 +138,26 @@ button {
   background-color: transparent;
   color: grey;
 }
+
+.login-page {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 100vh;
+}
+
+.login-background{
+  background-image: url("./components/images/happy.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.login-data{
+  padding: 0 20px 0 20px;
+  display: block;
+  background-color: #008959;
+}
+
+.login-data a{
+  color: white;
+}
