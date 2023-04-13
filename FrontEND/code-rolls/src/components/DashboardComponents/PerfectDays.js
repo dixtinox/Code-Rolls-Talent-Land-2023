@@ -3,9 +3,6 @@ import DayAchivement from './DayAchivement'
 import 'bootstrap/dist/css/bootstrap.css';
 
 const PerfectDays = ({title, containerColor, valores, streak, reload}) => {
-    valores.map(dia=> {
-        console.log(Object.values(dia)[1])
-    })
   return (
     <div className='d-flex align-items-center mb-3'>
         <div className='streak d-block' style={{ 
@@ -18,7 +15,6 @@ const PerfectDays = ({title, containerColor, valores, streak, reload}) => {
                 Object.values(dia)[0] ? colorData.push("green"): colorData.push("gray");
                 Object.values(dia)[1] ? colorData.push("blue"): colorData.push("gray");
                 Object.values(dia)[2] ? colorData.push("orange"): colorData.push("gray");
-                console.log(colorData)
                     return <DayAchivement arregloColor={colorData}/>
             })}
           </div>
