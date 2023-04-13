@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import Nutri from "../components-Nutri/Nutri";
 import { Card, Popover, Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { getColorsCard } from "./utils"
