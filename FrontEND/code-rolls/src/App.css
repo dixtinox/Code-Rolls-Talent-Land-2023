@@ -69,25 +69,27 @@
   align-items: center;
 }
 
-.step--cover{
-  display: flex;
+.nutri--container{
+  overflow: hidden;
   justify-content: center;
   align-items: center;
-  height: 150px;
-  width: 150px;
-  border-radius: 100px;
+}
+
+.nutri--containerCircular{
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 50%;
 }
 
 .nutri{
-  max-width: 100%;;
+  max-width: 100%;
   max-height: 100%;
 }
 
-.ant-tour-inner{
-  display: flex;
-  min-width: 100%;
-  align-items: center;
-  align-content: center;
+.modal-content{
+  background-color: transparent;
 }
 
 .ant-tour-cover{
@@ -130,6 +132,16 @@ button {
 .column {
   border-radius: 5px;
   padding: 10px;
+}
+
+.btn-flat{
+  background-color: transparent;
+  color: grey;
+}
+
+.btn-flat{
+  background-color: transparent;
+  color: grey;
 }
 
 .streaks-container {
