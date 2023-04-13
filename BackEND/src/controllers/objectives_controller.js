@@ -22,10 +22,8 @@ const IsPerfectDay = (user, dayNum) => {
 const IsPerfectWeek = (user) => {
   const sum = user.objectives.reduce((total, obj) => total + obj.perfectDay, 0);
   if (sum == 7) {
-    console.log("sum")
     return true;
   }
-  console.log(sum)
   return false;
 };
 
@@ -90,6 +88,10 @@ const CompleteDailyStreakFollowDiet = async (req, res) => {
     return res.status(statuses.BADREQUEST).json();
   }
 
+  if (user.objectives[differenceToday].followDiet == true) {
+    return res.status(statuses.BADREQUEST).json();
+  }
+
   //set to true the daily objective and add points
   let perfectDayVal = 0;
   let sumPoints = dailySinglePoints;
@@ -135,6 +137,9 @@ const CompleteDailyStreakDrink = async (req, res) => {
   let differenceToday = differenceInDays(today, initialStreak);
 
   if (differenceToday >= 7) {
+    return res.status(statuses.BADREQUEST).json();
+  }
+  if (user.objectives[differenceToday].drinkWater == true) {
     return res.status(statuses.BADREQUEST).json();
   }
 
@@ -183,6 +188,9 @@ const CompleteDailyStreakExcercise = async (req, res) => {
   let differenceToday = differenceInDays(today, initialStreak);
 
   if (differenceToday >= 7) {
+    return res.status(statuses.BADREQUEST).json();
+  }
+  if (user.objectives[differenceToday].exercise == true) {
     return res.status(statuses.BADREQUEST).json();
   }
 //set to true the daily objective and add points
