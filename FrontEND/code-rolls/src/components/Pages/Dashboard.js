@@ -135,7 +135,7 @@ function Dashboard() {
             reload={getDashboardData}
           />
           <Streak
-            title="Come al menos 500 calorias"
+            title="Sigue tu plan de alimentación"
             buttonText="Listo!"
             containerColor="silver"
             valores={obj}
