@@ -1,12 +1,25 @@
 import React from "react";
 import Plan from "../components-Planes/Plan";
+import { NuevoPlanDrawer } from "../components-Planes/NuevoPlan.js/NuevoPlanDrawer";
 import "bootstrap/dist/css/bootstrap.css";
 import data from "../components-Planes/data";
 import { Button } from "antd";
+import { useState } from 'react'
+import { PlusOutlined } from '@ant-design/icons';
 
-/*<Plan nombre={cosa.title} tipo={cosa.tipo} autor={cosa.autor} tinte={cosa.tinte}/>*/
 
 const Planes = () => {
+
+  const [open, setOpen] = useState(false);
+
+  const showDrawer = () => {
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
+
   let count = 0;
   const render = data.map((diet) => {
     count = count >= 5 ? 1 : count + 1;
@@ -27,11 +40,12 @@ const Planes = () => {
       <div className="container-fluid">
         <h3>Planes alimenticios</h3>
         <br></br>
-        <Button type="primary" size={"large"}>
+        <Button type="primary" size={"large"} onClick={showDrawer} icon={<PlusOutlined />}>
           Agregar nuevo
         </Button>
         <div className="row gap-1">{render}</div>
       </div>
+      <NuevoPlanDrawer onClose={onClose} open={open}></NuevoPlanDrawer>
     </>
   );
 };
