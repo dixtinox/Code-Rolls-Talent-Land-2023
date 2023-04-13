@@ -21,7 +21,7 @@ const Plan = (props) => {
   );
   return (
     <>
-      <Popover content={content} title="Title" trigger="click">
+      <Popover content={content} title="Acciones" trigger="click">
         <div className="planes--plan col-lg-3 col-md-4 col-sm-6 mx-auto">
           <br></br>
           <Card

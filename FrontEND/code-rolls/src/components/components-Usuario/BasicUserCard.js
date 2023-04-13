@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Card, Avatar, Row, Col, Statistic } from "antd";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { DollarCircleOutlined, StarOutlined } from "@ant-design/icons";
+import { StarOutlined } from "@ant-design/icons";
+import { FaPaw, FaTrophy } from 'react-icons/fa';
 
 
 const BasicUserCard = () => {
@@ -60,7 +61,7 @@ const BasicUserCard = () => {
           value={user.nutriPoints}
           precision={0}
           valueStyle={{ color: '#3f8600' }}
-          suffix={<DollarCircleOutlined />}
+          suffix={<FaPaw />}
         />
       </Card>
     </Col>
@@ -71,7 +72,7 @@ const BasicUserCard = () => {
           value={user.perfectDays}
           precision={0}
           valueStyle={{ color: '#e8940e' }}
-          suffix={<StarOutlined />}
+          suffix={<FaTrophy />}
         />
       </Card>
     </Col>

@@ -3,26 +3,16 @@ import { Table, Popover, Button } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 
 export const MealList = (props) => {
-    const {meals} = props
+    const { meals } = props
 
     const columns = [
-        {
-          title: "Horario",
-          dataIndex: "meal_time",
-          key: "meal_time",
-        },
-        {
-          title: "Etiqueta",
-          dataIndex: "label",
-          key: "label",
-        },
         {
           title: "Nombre",
           dataIndex: "name",
           key: "name",
         },
         {
-          title: "Detalles",
+          title: "Descripción",
           dataIndex: "details",
           key: "details",
         },
