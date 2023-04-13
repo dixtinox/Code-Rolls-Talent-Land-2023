@@ -15,6 +15,7 @@ const Plan = (props) => {
   const toggle = () => {
     setActiveNutri(!activeNutri)
   }
+
   const content = (
     <div>
       <Button
