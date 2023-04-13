@@ -1,19 +1,10 @@
 import React from 'react'
-import { Modal, Button, Container, Row, Col } from 'react-bootstrap'
-import {BsInfoCircle} from 'react-icons/bs'
+import { Modal, Container, Row, Col } from 'react-bootstrap'
 import imagen0 from '../images/nutri0.png'
 import imagen1 from '../images/nutri.png'
 import imagen2 from '../images/nutriAzul.png'
 
 const Nutri = (props) => {
-
-    const [isShow, invokeModal] = React.useState(false)
-    const initModal = () => {
-        return invokeModal(!false)
-    }
-    const closeModal = () => {
-        return invokeModal(false)
-    }
 
     function seleccionarImagen(num){
         if(num == 0){
@@ -27,11 +18,13 @@ const Nutri = (props) => {
 
     return(
         <>
-        <Button variant={props.variant} onClick={initModal}>
+        <Button variant={props.variant} onClick={(event) => {
+            initModal();
+        }}>
         <BsInfoCircle />
         </Button>
         <div className='popup--container'>
-            <Modal show={isShow}>
+            <Modal show={props.active}>
             <Modal.Body>
                 <Container fluid>
                     <Row>
@@ -41,7 +34,7 @@ const Nutri = (props) => {
                             </div>
                         </Col>
                         <Col sm='8'>
-                            <Modal.Header closeButton onClick={closeModal}>
+                            <Modal.Header closeButton onClick={props.toggle}>
                                 <Modal.Title>Nutri</Modal.Title>
                             </Modal.Header>
                             {props.descripcion}
