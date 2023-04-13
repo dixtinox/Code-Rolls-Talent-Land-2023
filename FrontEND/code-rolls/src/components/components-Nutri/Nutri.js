@@ -27,7 +27,9 @@ const Nutri = (props) => {
 
     return(
         <>
-        <Button variant={props.variant} onClick={initModal}>
+        <Button variant={props.variant} onClick={(event) => {
+            initModal();
+        }}>
         <BsInfoCircle />
         </Button>
         <div className='popup--container'>
